@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg>
+      <filter id="noise">
+        <feTurbulence baseFrequency="0.01 0.08" type="turbulence">
+          <animate
+            attributeName="baseFrequency"
+            dur="1.2s"
+            from="0.01 0.006"
+            repeatCount="indefinite"
+            to="0.008 0.01"
+          ></animate>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="20"></feDisplacementMap>
+      </filter>
+    </svg>
+    <img src="./image.jpg" />
+  </body>
+</html>
